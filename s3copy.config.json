@@ -1,4 +1,0 @@
-{"configelem":[
-  {"orig":"<ORIG DIR>", "dest":"s3://<BUCKETNAME>/" , "key":"<KEY>", "compression":".gz" , "filter":"(.*).txt$" }
-]
-}
