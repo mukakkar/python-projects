@@ -9,12 +9,6 @@ parser = argparse.ArgumentParser(
             description='Copy the files from Local machine to S3 bucket')
 
 parser.add_argument( 
-        '-d', '--dry', 
-        help='Dry run for the application.',
-        default=False,
-        action='store_true')
-
-parser.add_argument( 
         '-c', '--config', 
         help='Config file for the application',
         default='s3copy.config.json') 
@@ -36,7 +30,7 @@ def main(args):
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),args.config),'r') as f:
             json_data=json.loads(f.read())
             obj = s3copy.S3Copy(json_data)
-            obj.process()
+            obj.process(25)
 
 if __name__ == "__main__":
     args = parser.parse_args()
