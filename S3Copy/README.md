@@ -5,7 +5,7 @@ The configuration file is as below. Add more entries for DIR/BUCKET combination 
 
 {
 "configelem":[
-  {"orig":"<DIR>", "dest":"s3://<YOUR BUCKET GOES HERE>/" , "key":"<YOUR KEY GOES HERE", "compression":".gz" , "filter":"(.*).txt$"}
+  {"orig":"DIR", "dest":"s3://BUCKET/" , "key":"S3KEY", "compression":".gz" , "filter":"(.*).txt$"}
 ]
 }
 
