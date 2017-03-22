@@ -43,7 +43,8 @@ class Child(object):
 c=Child()
 
 """ set x to a test string """
-c.x = "Dummy test string """
+
+c.x = "Dummy test string"
 try:
     assert c.x == "Dummy test string" 
 except AssertionError as ae:
